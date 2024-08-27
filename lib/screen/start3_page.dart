@@ -1,34 +1,33 @@
 import 'package:flutter/material.dart';
 
-class Start2_page extends StatefulWidget {
-  const Start2_page({super.key});
+class Start3_page extends StatefulWidget {
+  const Start3_page({super.key});
 
   @override
-  State<Start2_page> createState() => _Start2_pageState();
+  State<Start3_page> createState() => _Start3_pageState();
 }
 
-class _Start2_pageState extends State<Start2_page> {
+class _Start3_pageState extends State<Start3_page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       backgroundColor: Color(0xFF5255C1),
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 170),
+            padding: const EdgeInsets.only(top: 140),
             child: Container(
-              height: 260,
+              height: 290,
               width: double.infinity,
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
-                  image: AssetImage('assets/img/st2.jpeg'),
+                  image: AssetImage('assets/img/ST#.jpg'),
                 ),
               ),
             ),
           ),
-
+          SizedBox(height: 10,),
           Padding(
             padding: const EdgeInsets.all(20),
             child: Container(
@@ -44,7 +43,7 @@ class _Start2_pageState extends State<Start2_page> {
                     height: 100,
                   ),
                   const Text(
-                    'Write a Resume Thats Gets\nYou Hired',
+                    'Recruiter-Approved\nResume Builder',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 20,
@@ -52,20 +51,16 @@ class _Start2_pageState extends State<Start2_page> {
                       color: Color(0xFF0FF1F2544),
                     ),
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
+                  SizedBox(height: 20,),
                   const Text(
                     'By using the JUBI job seekers can improve\ntheir changes of landing an interview for\nthier desires Job.',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 12),
-                  ),
+                    textAlign: TextAlign.center,style: TextStyle(fontSize: 12),),
                   SizedBox(
                     height: 20,
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.of(context).pushNamed('/start3');
+                      Navigator.of(context).pushNamed('/start4');
                     },
                     child: Container(
                       height: 50,
