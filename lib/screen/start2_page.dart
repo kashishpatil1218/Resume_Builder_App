@@ -58,7 +58,7 @@ class _Start2_pageState extends State<Start2_page> {
                   const Text(
                     'By using the JUBI job seekers can improve\ntheir changes of landing an interview for\nthier desires Job.',
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 12),
+                    style: TextStyle(fontSize: 12,color: Colors.black54),
                   ),
                   SizedBox(
                     height: 20,
