@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+
+import '../screen/Profile/my_detail_page.dart';
 import '../screen/Profile/profile_page.dart';
 import '../screen/splash_page.dart';
 import '../screen/start1_page.dart';
@@ -14,4 +16,6 @@ Map<String, Widget Function(BuildContext context)> routes = {
   '/start3':(context) => const Start3_page(),
   '/start4':(context) => const  Start4_page(),
   '/pro':(context) => const  profile_page(),
+  '/profile':(context) => const  myDetail_page(),
 };
+
