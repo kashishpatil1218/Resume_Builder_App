@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-import '../utils/global.dart';
+import '../../utils/global.dart';
 
 class Start4_page extends StatefulWidget {
   const Start4_page({super.key});

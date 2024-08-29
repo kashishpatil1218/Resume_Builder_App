@@ -32,45 +32,51 @@ class _profile_pageState extends State<profile_page> {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).pushNamed("");
+                Navigator.of(context).pushNamed("/contact");
               },
               child: Home_cetogory("Contact",Icons.contact_emergency_outlined),
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).pushNamed("");
+                Navigator.of(context).pushNamed("/edu");
               },
               child: Home_cetogory("Education",Icons.workspace_premium),
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).pushNamed("");
+                Navigator.of(context).pushNamed("/frontexp");
               },
               child: Home_cetogory("Experience",Icons.file_copy_outlined),
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).pushNamed("");
+                Navigator.of(context).pushNamed("/frontCerti");
               },
               child: Home_cetogory("Certificates",Icons.redeem),
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).pushNamed("");
+                Navigator.of(context).pushNamed("/frontLang");
               },
               child: Home_cetogory("Language",Icons.language),
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).pushNamed("");
+                Navigator.of(context).pushNamed("/fskill");
               },
               child: Home_cetogory("Skills",Icons.star_border),
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).pushNamed("");
+                Navigator.of(context).pushNamed("/fpre");
               },
               child: Home_cetogory("Reference",Icons.article_outlined),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).pushNamed("/GeneretPDF");
+              },
+              child: Home_cetogory("Generate PDF",Icons.picture_as_pdf_outlined),
             ),
           ],
         ),

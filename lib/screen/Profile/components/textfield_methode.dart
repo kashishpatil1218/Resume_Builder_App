@@ -2,9 +2,11 @@
 
 import 'package:flutter/material.dart';
 
-TextField textfeild_Method({required String hint , required bool isAddress}) {
+TextField textfeild_Method({required String hint , required bool isAddress ,required bool isPhone}) {
+
   return TextField(
     maxLines: isAddress?4:1,
+
     decoration: InputDecoration(
       hintText:hint,
       enabledBorder: OutlineInputBorder(
@@ -19,10 +21,13 @@ TextField textfeild_Method({required String hint , required bool isAddress}) {
   );
 }
 
-Text Title_txt({required String text}) {
-  return Text(
-    text,
-    style: TextStyle(
-        color: Color(0xFF1F2544), fontWeight: FontWeight.bold),
+Widget Title_txt({required String text}) {
+  return Padding(
+    padding: const EdgeInsets.all(8.0),
+    child: Text(
+      text,
+      style: TextStyle(
+          color: Color(0xFF1F2544), fontWeight: FontWeight.bold),
+    ),
   );
 }
