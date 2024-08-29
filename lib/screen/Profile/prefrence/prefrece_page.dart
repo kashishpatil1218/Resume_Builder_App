@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../utils/global.dart';
 import '../components/textfield_methode.dart';
 
 class prefrance_Page extends StatefulWidget {
@@ -23,7 +24,40 @@ class _prefrance_PageState extends State<prefrance_Page> {
         ),
       ),
       body: SingleChildScrollView(
-        child: Column(
+        child: Column(children: [
+          ...List.generate(
+            refereceList.length,
+                (index) => Reference_detail(index: index),
+          )
+        ],),
+      ),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(left: 320),
+        child: Container(
+          height: 50,
+          width: 50,
+          child: FloatingActionButton(
+            onPressed: () {
+              setState(() {
+                refereceList.add({
+                  'f_name': TextEditingController(),
+                  'postion_title': TextEditingController(),
+                  'cmp': TextEditingController(),
+                  'num': TextEditingController(),
+                  'email': TextEditingController(),
+                });
+              });
+            },
+            backgroundColor: Color(0xFF5255C1),
+            child: Icon(Icons.add),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget Reference_detail({required int index}) {
+    return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
@@ -33,7 +67,7 @@ class _prefrance_PageState extends State<prefrance_Page> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: textfeild_Method(
-                  hint: 'Adam Rush', isAddress: false, isPhone: false),
+                  hint: 'Adam Rush', isAddress: false, isPhone: false,controller:refereceList[index]['f_name'] ),
             ),
             SizedBox(
               height: 10,
@@ -45,7 +79,7 @@ class _prefrance_PageState extends State<prefrance_Page> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: textfeild_Method(
-                  hint: '3D Artist', isAddress: false, isPhone: false),
+                  hint: '3D Artist', isAddress: false, isPhone: false,controller: refereceList[index]['postion_title']),
             ),
             SizedBox(
               height: 10,
@@ -57,7 +91,7 @@ class _prefrance_PageState extends State<prefrance_Page> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: textfeild_Method(
-                  hint: 'Microsoft', isAddress: false, isPhone: false),
+                  hint: 'Microsoft', isAddress: false, isPhone: false,controller: refereceList[index]['cmp']),
             ),
             SizedBox(
               height: 10,
@@ -69,7 +103,7 @@ class _prefrance_PageState extends State<prefrance_Page> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: textfeild_Method(
-                  hint: '1234567890', isAddress: false, isPhone: true),
+                  hint: '1234567890', isAddress: false, isPhone: true,controller:refereceList[index]['num']),
             ),
             SizedBox(
               height: 10,
@@ -81,11 +115,17 @@ class _prefrance_PageState extends State<prefrance_Page> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: textfeild_Method(
-                  hint: 'adm123@gmail.com', isAddress: false, isPhone: false),
+                  hint: 'adm123@gmail.com', isAddress: false, isPhone: false,controller: refereceList[index]['email']),
             ),
             Center(
               child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    if (refereceList.length != 1) {
+                      refereceList.removeLast();
+                    }
+                  });
+                },
                 icon: const Icon(
                   Icons.highlight_remove,
                   size: 30,
@@ -94,21 +134,8 @@ class _prefrance_PageState extends State<prefrance_Page> {
               ),
             ),
             //for Add refrence Detalis
-            Padding(
-              padding: const EdgeInsets.only(left: 320),
-              child: Container(
-                height: 50,
-                width: 50,
-                child: FloatingActionButton(
-                  onPressed: () {},
-                  backgroundColor: Color(0xFF5255C1),
-                  child: Icon(Icons.add),
-                ),
-              ),
-            ),
+
           ],
-        ),
-      ),
-    );
+        );
   }
 }

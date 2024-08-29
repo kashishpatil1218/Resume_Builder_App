@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:resumebuilderapp/screen/Profile/components/textfield_methode.dart';
+import 'package:resumebuilderapp/utils/global.dart';
 
 class language_page extends StatefulWidget {
   const language_page({super.key});
@@ -21,7 +22,39 @@ class _language_pageState extends State<language_page> {
               TextStyle(color: Color(0xFF1F2544), fontWeight: FontWeight.bold),
         ),
       ),
-      body: Column(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            ...List.generate(
+              langList.length,
+                  (index) => Language_methode(index: index),
+            )
+          ],
+        ),
+      ),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(left: 320),
+        child: Container(
+          height: 50,
+          width: 50,
+          child: FloatingActionButton(
+            onPressed: () {
+              setState(() {
+                langList.add({
+                  'lan': TextEditingController(),
+                });
+              });
+            },
+            backgroundColor: Color(0xFF5255C1),
+            child: Icon(Icons.add),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Column Language_methode({required int index}) {
+    return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
@@ -31,28 +64,10 @@ class _language_pageState extends State<language_page> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: textfeild_Method(
-                hint: 'Hindi', isAddress: false, isPhone: false),
+                hint: 'Hindi', isAddress: false, isPhone: false,controller: langList[index]['lan']),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10,horizontal:110),
-            child: GestureDetector(
-              child: Container(
-                height: 50,
-                width: 170,
-                decoration: BoxDecoration(
-                  color: Color(0xFF1F2544),
-                  borderRadius: BorderRadius.circular(25),
-                ),
-                child: const Center(
-                    child: Text(
-                  'Add Language',
-                  style: TextStyle(color: Colors.white, fontSize: 16),
-                )),
-              ),
-            ),
-          ),
+
         ],
-      ),
-    );
+      );
   }
 }

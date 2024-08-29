@@ -14,19 +14,31 @@ class _Start3_pageState extends State<Start3_page> {
       backgroundColor: Color(0xFF5255C1),
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 140),
-            child: Container(
-              height: 290,
-              width: double.infinity,
-              decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                  image: AssetImage('assets/img/ST#.jpg'),
+          Expanded(
+
+            child: Padding(
+              padding:  EdgeInsets.only(left:300,top:20),
+              child: Image(image:AssetImage('assets/img/sparkling-removebg-preview.png'),height:100,width:100,),
+            ),
+          ),
+          Expanded(
+            flex: 9,
+            child: Padding(
+              padding: const EdgeInsets.only(top:80),
+              child: Container(
+                height: 295,
+                width: double.infinity,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                    image: AssetImage('assets/img/ST#.jpg'),
+                  ),
                 ),
               ),
             ),
           ),
+
+
           SizedBox(height: 10,),
           Padding(
             padding: const EdgeInsets.all(20),
@@ -60,7 +72,7 @@ class _Start3_pageState extends State<Start3_page> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.of(context).pushNamed('/start4');
+                      Navigator.of(context).pushNamed('/pro');
                     },
                     child: Container(
                       height: 50,

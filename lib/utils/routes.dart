@@ -22,14 +22,13 @@ import '../screen/Start_demo/splash_page.dart';
 import '../screen/Start_demo/start1_page.dart';
 import '../screen/Start_demo/start2_page.dart';
 import '../screen/Start_demo/start3_page.dart';
-import '../screen/Start_demo/strat4_page.dart';
+
 
 Map<String, Widget Function(BuildContext context)> routes = {
   '/':(context) => const Splash_page(),
   '/start1':(context) => const Start1_page(),
   '/start2':(context) => const Start2_page(),
   '/start3':(context) => const Start3_page(),
-  '/start4':(context) => const  Start4_page(),
   '/pro':(context) => const  profile_page(),
   '/profile':(context) => const  myDetail_page(),
   '/contact':(context) => const  contact_page(),

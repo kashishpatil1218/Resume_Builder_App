@@ -16,19 +16,26 @@ class _Start2_pageState extends State<Start2_page> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 170),
+            padding: const EdgeInsets.only(top: 85),
             child: Container(
-              height: 260,
+              height:315,
               width: double.infinity,
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
-                  image: AssetImage('assets/img/st2.jpeg'),
+                  image: AssetImage('assets/img/brunette-businesswoman-showing-her-tablet.jpg'),
                 ),
               ),
             ),
           ),
 
+          // Padding(
+          //   padding:  EdgeInsets.only(right:300,),
+          //   child: Image(image:AssetImage('assets/img/sparkling-removebg-preview.png'),height: 50,width: 50,),
+          // ),
+          SizedBox(
+            height:40,
+          ),
           Padding(
             padding: const EdgeInsets.all(20),
             child: Container(
