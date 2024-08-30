@@ -27,7 +27,7 @@ class _language_pageState extends State<language_page> {
           children: [
             ...List.generate(
               langList.length,
-                  (index) => Language_methode(index: index),
+              (index) => Language_methode(index: index),
             )
           ],
         ),
@@ -55,19 +55,39 @@ class _language_pageState extends State<language_page> {
 
   Column Language_methode({required int index}) {
     return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 10),
-            child: Title_txt(text: 'Language'),
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(left: 10),
+          child: Title_txt(text: 'Language'),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            children: [
+              Expanded(
+                child: textfeild_Method(
+                    hint: 'Hindi',
+                    isAddress: false,
+                    isPhone: false,
+                    controller: langList[index]['lan'],
+                    isNumber: false),
+              ),
+              IconButton(
+                onPressed: () {
+                  setState(() {
+                    langList.removeLast();
+                  });
+                },
+                icon: const Icon(
+                  Icons.highlight_remove,
+                  color: Color(0xFF5255C1),
+                ),
+              )
+            ],
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfeild_Method(
-                hint: 'Hindi', isAddress: false, isPhone: false,controller: langList[index]['lan']),
-          ),
-
-        ],
-      );
+        ),
+      ],
+    );
   }
 }

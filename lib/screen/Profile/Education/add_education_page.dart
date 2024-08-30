@@ -94,7 +94,11 @@ class _add_education_pageState extends State<add_education_page> {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: textfeild_Method(
-              hint: 'University of any Town', isAddress: false, isPhone: false,controller:eduList[index]['school']),
+              hint: 'University of any Town',
+              isAddress: false,
+              isPhone: false,
+              controller: eduList[index]['school'],
+              isNumber: false),
         ),
         SizedBox(
           height: 10,
@@ -106,7 +110,11 @@ class _add_education_pageState extends State<add_education_page> {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: textfeild_Method(
-              hint: 'Master', isAddress: false, isPhone: false,controller:eduList[index]['degree']),
+              hint: 'Master',
+              isAddress: false,
+              isPhone: false,
+              controller: eduList[index]['degree'],
+              isNumber: false),
         ),
         SizedBox(
           height: 10,
@@ -118,7 +126,11 @@ class _add_education_pageState extends State<add_education_page> {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: textfeild_Method(
-              hint: '3.5D/4.00/B+', isAddress: false, isPhone: false,controller:eduList[index]['grade']),
+              hint: '3.5D/4.00/B+',
+              isAddress: false,
+              isPhone: false,
+              controller: eduList[index]['grade'],
+              isNumber: false),
         ),
         SizedBox(
           height: 10,
@@ -144,7 +156,11 @@ class _add_education_pageState extends State<add_education_page> {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: textfeild_Method(
-                    hint: '1999', isAddress: false, isPhone: false,controller:eduList[index]['start']),
+                    hint: '1999',
+                    isAddress: false,
+                    isPhone: false,
+                    controller: eduList[index]['start'],
+                    isNumber: true),
               ),
             ),
             SizedBox(
@@ -154,7 +170,11 @@ class _add_education_pageState extends State<add_education_page> {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: textfeild_Method(
-                    hint: '2002', isAddress: false, isPhone: false,controller:eduList[index]['end']),
+                    hint: '2002',
+                    isAddress: false,
+                    isPhone: false,
+                    controller: eduList[index]['end'],
+                    isNumber: true),
               ),
             ),
           ],

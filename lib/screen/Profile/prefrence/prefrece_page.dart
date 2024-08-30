@@ -67,7 +67,7 @@ class _prefrance_PageState extends State<prefrance_Page> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: textfeild_Method(
-                  hint: 'Adam Rush', isAddress: false, isPhone: false,controller:refereceList[index]['f_name'] ),
+                  hint: 'Adam Rush', isAddress: false, isPhone: false,controller:refereceList[index]['f_name'],isNumber: false),
             ),
             SizedBox(
               height: 10,
@@ -79,7 +79,7 @@ class _prefrance_PageState extends State<prefrance_Page> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: textfeild_Method(
-                  hint: '3D Artist', isAddress: false, isPhone: false,controller: refereceList[index]['postion_title']),
+                  hint: '3D Artist', isAddress: false, isPhone: false,controller: refereceList[index]['postion_title'],isNumber: false),
             ),
             SizedBox(
               height: 10,
@@ -91,7 +91,7 @@ class _prefrance_PageState extends State<prefrance_Page> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: textfeild_Method(
-                  hint: 'Microsoft', isAddress: false, isPhone: false,controller: refereceList[index]['cmp']),
+                  hint: 'Microsoft', isAddress: false, isPhone: false,controller: refereceList[index]['cmp'],isNumber: false),
             ),
             SizedBox(
               height: 10,
@@ -103,7 +103,7 @@ class _prefrance_PageState extends State<prefrance_Page> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: textfeild_Method(
-                  hint: '1234567890', isAddress: false, isPhone: true,controller:refereceList[index]['num']),
+                  hint: '1234567890', isAddress: false, isPhone: true,controller:refereceList[index]['num'],isNumber: true),
             ),
             SizedBox(
               height: 10,
@@ -115,7 +115,7 @@ class _prefrance_PageState extends State<prefrance_Page> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: textfeild_Method(
-                  hint: 'adm123@gmail.com', isAddress: false, isPhone: false,controller: refereceList[index]['email']),
+                  hint: 'adm123@gmail.com', isAddress: false, isPhone: false,controller: refereceList[index]['email'],isNumber: false),
             ),
             Center(
               child: IconButton(

@@ -97,7 +97,8 @@ class _certificates_pageState extends State<certificates_page> {
               hint: 'Google Ads',
               isAddress: false,
               isPhone: false,
-              controller: certificateList[index]['Name']),
+              controller: certificateList[index]['Name'],
+              isNumber: false),
         ),
         SizedBox(
           height: 10,
@@ -112,7 +113,8 @@ class _certificates_pageState extends State<certificates_page> {
               hint: 'InnovateX Trainning',
               isAddress: false,
               isPhone: false,
-              controller: certificateList[index]['institute']),
+              controller: certificateList[index]['institute'],
+              isNumber: false),
         ),
         SizedBox(
           height: 10,
@@ -127,9 +129,9 @@ class _certificates_pageState extends State<certificates_page> {
               hint: '2023',
               isAddress: false,
               isPhone: false,
-              controller: certificateList[index]['year']),
+              controller: certificateList[index]['year'],
+              isNumber: true),
         ),
-
         Padding(
           padding: const EdgeInsets.only(left: 10),
           child: Title_txt(text: "Summary"),
@@ -141,9 +143,9 @@ class _certificates_pageState extends State<certificates_page> {
                   'Summarize your certificates briefly highlighting relevent qualifications and experties',
               isAddress: true,
               isPhone: false,
-              controller: certificateList[index]['summary']),
+              controller: certificateList[index]['summary'],
+              isNumber: false),
         ),
-
       ],
     );
   }

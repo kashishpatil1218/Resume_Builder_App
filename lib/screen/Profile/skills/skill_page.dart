@@ -81,7 +81,7 @@ class _skill_pageState extends State<skill_page> {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: textfeild_Method(
-                      hint: 'Flutter', isAddress: false, isPhone: false,controller: skillList[index]['skill']),
+                      hint: 'Flutter', isAddress: false, isPhone: false,controller: skillList[index]['skill'],isNumber: false),
                 ),
               ),
               Padding(
@@ -110,7 +110,7 @@ class _skill_pageState extends State<skill_page> {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: textfeild_Method(
-                      hint: '2 Years', isAddress: false, isPhone: false,controller: skillList[index]['year']),
+                      hint: '2 Years', isAddress: false, isPhone: false,controller: skillList[index]['year'],isNumber: true),
                 ),
               ),
             ],

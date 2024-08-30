@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 TextField textfeild_Method({
+  required bool isNumber,
   required String hint,
   required bool isAddress,
   required bool isPhone,
   required controller,
 }) {
   return TextField(
+    keyboardType: isNumber? TextInputType.numberWithOptions():TextInputType.text,
     controller: controller,
     maxLines: isAddress ? 4 : 1,
     decoration: InputDecoration(

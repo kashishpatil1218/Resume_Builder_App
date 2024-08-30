@@ -1,7 +1,12 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
-
-
+ImagePicker imagePicker = ImagePicker();
+File? fileImg;
+//gender
+String gender='Female';
 List detailsList = [
   {'name': 'Personal'},
   {'name': 'Contact'},

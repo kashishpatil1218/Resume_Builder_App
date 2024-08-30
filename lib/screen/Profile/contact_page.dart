@@ -45,7 +45,7 @@ class _contact_pageState extends State<contact_page> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: textfeild_Method(
-                hint: 'johnsmith@123gamil.com', isAddress: false,isPhone: false,controller: contactList[index]['EAdd']),
+                hint: 'johnsmith@123gamil.com', isAddress: false,isPhone: false,controller: contactList[index]['EAdd'],isNumber: false),
           ),
           SizedBox(
             height: 10,
@@ -56,7 +56,7 @@ class _contact_pageState extends State<contact_page> {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: textfeild_Method(hint: '1234567890', isAddress: false,isPhone: true,controller: contactList[index]['num']),
+            child: textfeild_Method(hint: '1234567890', isAddress: false,isPhone: true,controller: contactList[index]['num'],isNumber: true),
           ),
           SizedBox(
             height: 10,
@@ -69,7 +69,7 @@ class _contact_pageState extends State<contact_page> {
             padding: const EdgeInsets.all(8.0),
             child: textfeild_Method(
                 hint: '12-shelly street,Sydney,NSW 2000,Australia.',
-                isAddress: true,isPhone: false,controller: contactList[index]['add']),
+                isAddress: true,isPhone: false,controller: contactList[index]['add'],isNumber: false),
           ),
           SizedBox(
             height: 10,
@@ -80,7 +80,7 @@ class _contact_pageState extends State<contact_page> {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: textfeild_Method(hint: 'Nswanimate.in', isAddress: false,isPhone: false,controller: contactList[index]['web']),
+            child: textfeild_Method(hint: 'Nswanimate.in', isAddress: false,isPhone: false,controller: contactList[index]['web'],isNumber: false),
           ),
           SizedBox(
             height: 10,
