@@ -28,13 +28,7 @@ pw.Widget textColumFor2(
           ),
         ),
       ):pw.Padding(padding: pw.EdgeInsets.zero),
-      colorForDivider
-          ? pw.Padding(padding: pw.EdgeInsets.zero)
-          : pw.Divider(
-              color: PdfColors.black,
-              endIndent: 90,
-              thickness: 2,
-            ),
+
       pw.Text(
         text,
         style: const pw.TextStyle(fontSize: 18),

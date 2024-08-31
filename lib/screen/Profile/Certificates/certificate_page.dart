@@ -129,7 +129,7 @@ class _certificates_pageState extends State<certificates_page> {
               hint: '2023',
               isAddress: false,
               isPhone: false,
-              controller: certificateList[index]['year'],
+              controller: certificateList[index]['start'],
               isNumber: true),
         ),
         Padding(

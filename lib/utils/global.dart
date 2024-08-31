@@ -34,7 +34,7 @@ List certificateList = [
     'Name': TextEditingController(),
     'institute': TextEditingController(),
     'start': TextEditingController(),
-    'end': TextEditingController(),
+    // 'end': TextEditingController(),
     'summary': TextEditingController(),
   }
 ];

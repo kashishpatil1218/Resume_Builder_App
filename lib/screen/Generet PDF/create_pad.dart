@@ -108,6 +108,192 @@ Future<Uint8List> pdfGenerator() async {
                         colorForDivider: false,
                         isTitle: true,
                       ),
+                      pw.Padding(
+                        padding: pw.EdgeInsets.only(top: 20),
+                        child: pw.Text(
+                          'Expirations',
+                          style: pw.TextStyle(
+                            color: PdfColors.black,
+                            fontSize: 25,
+                            fontWeight: pw.FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      pw.Divider(
+                          thickness: 2, color: PdfColors.black, endIndent: 90),
+                      ...List.generate(
+                        experinceList.length,
+                        (index) => pw.Column(
+                          children: [
+                            pw.Row(
+                              children: [
+                                textColumFor2(
+                                  textForTitle: 'no',
+                                  text: experinceList[index]['company'].text,
+                                  paddingForText: false,
+                                  textSize: false,
+                                  colorForDivider: false,
+                                  isTitle: false,
+                                ),
+                                pw.SizedBox(width: 10),
+                                textColumFor2(
+                                  textForTitle: 'no',
+                                  text: experinceList[index]['postion'].text,
+                                  paddingForText: false,
+                                  textSize: false,
+                                  colorForDivider: false,
+                                  isTitle: false,
+                                )
+                              ],
+                            ),
+                            pw.SizedBox(height: 3),
+                            pw.Row(
+                              children: [
+                                textColumFor2(
+                                  textForTitle: 'no',
+                                  text: experinceList[index]['start'].text,
+                                  paddingForText: false,
+                                  textSize: false,
+                                  colorForDivider: false,
+                                  isTitle: false,
+                                ),
+                                pw.SizedBox(width: 10),
+                                textColumFor2(
+                                  textForTitle: 'no',
+                                  text: experinceList[index]['end'].text,
+                                  paddingForText: false,
+                                  textSize: false,
+                                  colorForDivider: false,
+                                  isTitle: false,
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      pw.Padding(
+                        padding: pw.EdgeInsets.only(top: 20),
+                        child: pw.Text(
+                          'Education',
+                          style: pw.TextStyle(
+                            color: PdfColors.black,
+                            fontSize: 25,
+                            fontWeight: pw.FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      ...List.generate(
+                        eduList.length,
+                        (index) => pw.Column(
+                          children: [
+                            pw.Divider(
+                                thickness: 2,
+                                color: PdfColors.black,
+                                endIndent: 90),
+                            pw.Row(
+                              children: [
+                                textColumFor2(
+                                  textForTitle: 'no',
+                                  text: eduList[index]['school'].text,
+                                  paddingForText: false,
+                                  textSize: false,
+                                  colorForDivider: false,
+                                  isTitle: false,
+                                ),
+                                pw.SizedBox(width: 10),
+                                textColumFor2(
+                                  textForTitle: 'no',
+                                  text: eduList[index]['degree'].text,
+                                  paddingForText: false,
+                                  textSize: false,
+                                  colorForDivider: false,
+                                  isTitle: false,
+                                )
+                              ],
+                            ),
+                            pw.SizedBox(height: 3),
+                            pw.Row(
+                              children: [
+                                textColumFor2(
+                                  textForTitle: 'no',
+                                  text: eduList[index]['start'].text,
+                                  paddingForText: false,
+                                  textSize: false,
+                                  colorForDivider: false,
+                                  isTitle: false,
+                                ),
+                                pw.SizedBox(width: 10),
+                                textColumFor2(
+                                  textForTitle: 'no',
+                                  text: eduList[index]['end'].text,
+                                  paddingForText: false,
+                                  textSize: false,
+                                  colorForDivider: false,
+                                  isTitle: false,
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                      pw.Padding(
+                        padding: pw.EdgeInsets.only(top: 20),
+                        child: pw.Text(
+                          'Certificate',
+                          style: pw.TextStyle(
+                            color: PdfColors.black,
+                            fontSize: 25,
+                            fontWeight: pw.FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      ...List.generate(
+                        certificateList.length,
+                        (index) => pw.Column(
+                          mainAxisAlignment: pw.MainAxisAlignment.start,
+                          children: [
+                            pw.Divider(
+                                thickness: 2,
+                                color: PdfColors.black,
+                                endIndent: 90),
+                            pw.Row(
+                              children: [
+                                textColumFor2(
+                                  textForTitle: 'no',
+                                  text: certificateList[index]['Name'].text,
+                                  paddingForText: false,
+                                  textSize: false,
+                                  colorForDivider: false,
+                                  isTitle: false,
+                                ),
+                                pw.SizedBox(width: 10),
+                                textColumFor2(
+                                  textForTitle: 'no',
+                                  text:
+                                      certificateList[index]['institute'].text,
+                                  paddingForText: false,
+                                  textSize: false,
+                                  colorForDivider: false,
+                                  isTitle: false,
+                                )
+                              ],
+                            ),
+                             pw.SizedBox(height: 3),
+                            pw.Row(
+                              children: [
+                                textColumFor2(
+                                  textForTitle: 'no',
+                                  text: certificateList[index]['start'].text,
+                                  paddingForText: false,
+                                  textSize: false,
+                                  colorForDivider: false,
+                                  isTitle: false,
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
