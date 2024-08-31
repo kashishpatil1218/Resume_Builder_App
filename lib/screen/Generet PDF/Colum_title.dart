@@ -8,7 +8,7 @@ pw.Widget columnTitle({required String text})
   return pw.Column(
     crossAxisAlignment: pw.CrossAxisAlignment.start,
       children: [
-        pw.Padding(padding: pw.EdgeInsets.only(left: 18,top: 20),
+        pw.Padding(padding: pw.EdgeInsets.only(left: 18,top:20),
           child: pw.Text(
             text,
             style: pw.TextStyle(

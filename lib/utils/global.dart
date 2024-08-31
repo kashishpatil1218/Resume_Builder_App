@@ -6,7 +6,7 @@ import 'package:image_picker/image_picker.dart';
 ImagePicker imagePicker = ImagePicker();
 File? fileImg;
 //gender
-String gender='Female';
+String gender = 'Female';
 List detailsList = [
   {'name': 'Personal'},
   {'name': 'Contact'},
@@ -52,7 +52,6 @@ List experinceList = [
   }
 ];
 
-
 List refereceList = [
   {
     'f_name': TextEditingController(),
@@ -60,7 +59,6 @@ List refereceList = [
     'cmp': TextEditingController(),
     'num': TextEditingController(),
     'email': TextEditingController(),
-
   }
 ];
 
@@ -89,7 +87,5 @@ List skillList = [
 List langList = [
   {
     'lan': TextEditingController(),
-
-
   }
 ];
