@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:pdf/pdf.dart';
 import 'package:printing/printing.dart';
+import 'package:resumebuilderapp/screen/Generet%20PDF/Colum_title.dart';
 import 'package:resumebuilderapp/screen/Profile/components/textfield_methode.dart';
 
 import '../../utils/global.dart';
@@ -28,32 +29,59 @@ Future<Uint8List> pdfGenerator() async {
               pw.Container(
                 child: pw.Image(backImage, fit: pw.BoxFit.cover),
               ),
-              pw.Column(
-                children: [
-                  pw.SizedBox(height: 100),
-                  pw.Container(
-                    height: 190,
-                    width: 200,
-                    decoration: pw.BoxDecoration(
-                        color: PdfColors.blue,
-                        border: pw.Border.all(color: PdfColors.blue, width: 2)),
-                    child: pw.Image(profileimage, fit: pw.BoxFit.cover),
-                  ),
-                ],
-              ),
-              pw.Column(
+              pw.Container(
+                width: 215,
+                child: pw.Column(
                   crossAxisAlignment: pw.CrossAxisAlignment.start,
+                  mainAxisAlignment: pw.MainAxisAlignment.spaceEvenly,
                   children: [
-                    pw.SizedBox(height: 120),
-                    pw.Row(children: [
-                      pw.SizedBox(width: 300),
-                      pw.Text('hii',
-                          style: pw.TextStyle(
-                              color: PdfColors.black,
-                              fontSize: 50,
-                              fontWeight: pw.FontWeight.bold))
-                    ])
-                  ]),
+                    //pw.SizedBox(height: 100),
+                    pw.Padding(
+                      padding: pw.EdgeInsets.only(left: 18, top: 80),
+                      child: pw.Container(
+                        height: 190,
+                        width: 200,
+                        decoration: pw.BoxDecoration(
+                          color: PdfColors.blue,
+                          border:
+                              pw.Border.all(color: PdfColors.blue, width: 2),
+                        ),
+                        child: pw.Image(profileimage, fit: pw.BoxFit.cover),
+                      ),
+                    ),
+                    columnTitle(text: 'Contact'),
+                    detialContactText(Text: contactList[0]['num'].text),
+                    detialContactText(Text: contactList[0]['EAdd'].text),
+                    detialContactText(Text: contactList[0]['add'].text),
+                    detialContactText(Text: contactList[0]['web'].text),
+                    columnTitle(text: 'Skills'),
+
+
+                    ...List.generate(
+                      skillList.length,
+                      (index) =>pw.Row(
+                        mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+                          children: [
+                            detialContactText(Text: skillList[index]['skill'].text),
+                            detialContactText(Text: skillList[index]['year'].text),
+                          ],
+                      ),
+                    ),
+                    columnTitle(text: 'Language'),
+                    ...List.generate(
+                      langList.length,
+                          (index) =>pw.Row(
+                        mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+                        children: [
+                          detialContactText(Text: langList[index]['lan'].text),
+                        ],
+                      ),
+                    ),
+                    pw.SizedBox(height: 20)
+                  ],
+
+                ),
+              ),
             ],
           ),
         );

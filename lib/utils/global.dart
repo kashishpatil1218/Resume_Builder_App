@@ -66,8 +66,8 @@ List refereceList = [
 
 List contactList = [
   {
-    'EAdd': TextEditingController(),
     'num': TextEditingController(),
+    'EAdd': TextEditingController(),
     'add': TextEditingController(),
     'web': TextEditingController(),
   }
@@ -77,7 +77,6 @@ List profiletList = [
     'name': TextEditingController(),
     'title': TextEditingController(),
     'aboutme': TextEditingController(),
-
   }
 ];
 
